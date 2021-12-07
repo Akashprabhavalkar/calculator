@@ -7,24 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number">
-    <button>c</button><br><br>
-    <button>9</button>
-    <button>8</button>
-    <button>7</button>
-    <button>+</button><br><br>
-    <button>6</button>
-    <button>5</button>
-    <button>4</button>
-    <button>-</button><br><br>
-    <button>3</button>
-    <button>2</button>
-    <button>1</button>
-    <button>*</button><br><br>
-    <button>0</button>
-    <button>.</button>
-    <button>=</button>
-    <button>/</button><br><br>
+    <input type="text" id="result">
+    <button onclick="clearresult()">c</button><br><br>
+    <button onclick="displayno(this)">9</button>
+    <button  onclick="displayno(this)">8</button>
+    <button  onclick="displayno(this)">7</button>
+    <button  onclick="displayno(this)">+</button><br><br>
+    <button  onclick="displayno(this)">6</button>
+    <button  onclick="displayno(this)">5</button>
+    <button  onclick="displayno(this)">4</button>
+    <button  onclick="displayno(this)">-</button><br><br>
+    <button  onclick="displayno(this)">3</button>
+    <button  onclick="displayno(this)">2</button>
+    <button  onclick="displayno(this)">1</button>
+    <button  onclick="displayno(this)">*</button><br><br>
+    <button onclick="displayno(this)">0</button>
+    <button onclick="displayno(this)">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="displayno(this)">/</button><br><br>
+
+    <script>
+        function displayno(ctrl)
+        {
+            document.getElementById("result").value += ctrl.innerText;
+        }
+        function clearresult()
+        {
+            document.getElementById("result").value = "";
+        }
+        function calculate()
+        {
+            document.getElementById("result").value = eval( document.getElementById("result").value)  
+        }
+        
+
+    </script>
 
 
 </body>
